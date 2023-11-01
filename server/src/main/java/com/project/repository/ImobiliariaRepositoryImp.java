@@ -82,6 +82,7 @@ public class ImobiliariaRepositoryImp implements ImobiliariaRepository{
 
     public List<Object> findAllMongoDB() {
 
+        //Referencia ao banco de dados imobiliaria
         MongoDatabase database = client.getDatabase("imobiliaria");
         MongoCollection<Document> collection = database.getCollection("imoveis");
 
