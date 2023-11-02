@@ -38,6 +38,7 @@ public class ImobiliariaRepositoryImp implements ImobiliariaRepository{
     }
 
     public List<Imovel> findAllMySQL() throws SQLException{
+
         Connection connection = null;
 
         try {
@@ -45,6 +46,7 @@ public class ImobiliariaRepositoryImp implements ImobiliariaRepository{
             ResultSet rs = connection.createStatement().executeQuery("select * from imoveis");
 
             List<Imovel> imoveis = new ArrayList<Imovel>();
+            
 
             while(rs.next()){
                 long id = rs.getLong("id");
